@@ -194,24 +194,28 @@ body{
 }
 
 /* category */
-#category{
+#category,
+#popular-product{
     display: flex;
     flex-direction: column;
     max-width: 1000px;
     margin: 50px auto;
 }
-.category-heading{
+.category-heading,
+.product-heading{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.category-heading h2{
+.category-heading h2,
+.product-heading h3{
     font-size: 1.56rem;
     font-weight: 700;
     color: #202020;
     letter-spacing: 0.5px;
 }
-.category-heading span{
+.category-heading span,
+.product-heading span{
     color: #a7a7a7;
     font-weight: 400;
     letter-spacing: 1px;
@@ -251,3 +255,90 @@ body{
     transform: scale(1.1);
     transition: all ease 0.1s;
 }
+
+/* popular-product */
+#popular-product{
+    margin: 80px auto;
+}
+.product-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap:50px;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0px;
+}
+.product-box{
+    width: 300px;
+    border: 1px solid #eeeeee;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.product-box img{
+    width: 90%;
+    height: 180px;
+    object-fit: contain;
+    object-position: center;
+    margin: auto;
+}
+.product-box strong{
+    color: #202020;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.product-box .description{
+    color: #949494;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.product-box .price{
+    margin-top: 10px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color:#393939
+}
+.product-box .cart-btn{
+    width: 100%;
+    height: 40px;
+    background-color: #ecf7ee;
+    color: #4eb060;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    transition: all ease 0.3s;
+ 
+}
+.product-box .cart-btn i{
+    margin-right: 10px;
+}
+.product-box .cart-btn:hover{
+    background-color: #4eb060;
+    color: white;
+    transition: all ease 0.3s;
+}
+.product-box .like-btn{
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    color: #c9c9c9;
+    font-size: 1.3rem;
+}
+.product-box .like-btn:hover{
+    transform: scale(1.1);
+    transition: all ease 0.1s;
+    color: #ff3f3c;
+}
+
+
+
+
+
+
