@@ -195,20 +195,23 @@ body{
 
 /* category */
 #category,
-#popular-product{
+#popular-product,
+#award{
     display: flex;
     flex-direction: column;
     max-width: 1000px;
     margin: 50px auto;
 }
 .category-heading,
-.product-heading{
+.product-heading,
+.award-heading{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .category-heading h2,
-.product-heading h3{
+.product-heading h3,
+.award-heading h3{
     font-size: 1.56rem;
     font-weight: 700;
     color: #202020;
@@ -410,6 +413,32 @@ body{
 }
 .client-box p{
     color: #7c7c7c;
+}
+
+/* award-logo */
+#award{
+    margin: 100px auto;
+}
+.logo-container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.logo-container img{
+    height: 200px;
+    object-fit: contain;
+    object-position: center;
+    filter: grayscale(1);
+    opacity: 0.5;
+    transition: all ease 0.3s;
+}
+.logo-container img:hover{
+    filter: grayscale(0);
+    opacity: 1;
+    transform: scale(1.2);
+    transition: all ease 0.3s;
+
+
 }
 
 
